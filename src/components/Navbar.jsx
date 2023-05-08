@@ -2,6 +2,14 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
+import {
+  DribbbleIcon,
+  GithubIcon,
+  LinkedInIcon,
+  PinterestIcon,
+  TwitterIcon,
+} from "./Icons";
+import { motion } from "framer-motion";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -38,25 +46,56 @@ const Navbar = () => {
       </div>
 
       {/* social icons */}
-      <nav>
-        <Link href="/" target={"_blank"}>
-          K
-        </Link>
-        <Link href="/" target={"_blank"}>
-          K
-        </Link>
-        <Link href="/" target={"_blank"}>
-          K
-        </Link>
-        <Link href="/" target={"_blank"}>
-          K
-        </Link>
-        <Link href="/" target={"_blank"}>
-          K
-        </Link>
-        <Link href="/" target={"_blank"}>
-          K
-        </Link>
+      <nav className="flex justify-center items-center flex-wrap">
+        <motion.a
+          href="https://www.linkedin.com/in/karthikeya-kotegar/"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mr-3"
+        >
+          <TwitterIcon />
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/karthikeya-kotegar/"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3"
+        >
+          <GithubIcon />
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/karthikeya-kotegar/"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3"
+        >
+          <LinkedInIcon />
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/karthikeya-kotegar/"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 mx-3"
+        >
+          <PinterestIcon />
+        </motion.a>
+
+        <motion.a
+          href="https://www.linkedin.com/in/karthikeya-kotegar/"
+          target="_blank"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-6 ml-3"
+        >
+          <DribbbleIcon />
+        </motion.a>
       </nav>
     </header>
   );

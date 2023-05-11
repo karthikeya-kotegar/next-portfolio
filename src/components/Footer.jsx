@@ -9,7 +9,7 @@ const Footer = () => {
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div className="flex items-center">
           Build with <span className="text-primary text-2xl px-1">&#9825;</span>
-          by
+          by &nbsp;
           <Link
             href="/"
             target="_blank"

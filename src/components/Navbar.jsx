@@ -6,10 +6,13 @@ import {
   DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
+  MoonIcon,
   PinterestIcon,
+  SunIcon,
   TwitterIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -29,6 +32,7 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeSwitcher();
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       {/* menus */}
@@ -95,6 +99,18 @@ const Navbar = () => {
         >
           <DribbbleIcon />
         </motion.a>
+
+        {/* theme */}
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className="ml-3 flex items-center justify-center rounded-full p-1"
+        >
+          {mode === "dark" ? (
+            <SunIcon className="fill-dark" />
+          ) : (
+            <MoonIcon className="fill-dark" />
+          )}
+        </button>
       </nav>
     </header>
   );

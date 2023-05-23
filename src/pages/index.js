@@ -6,10 +6,19 @@ import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import Head from "next/head";
+import TransitionEffect from "@/components/TransitionEffect";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Karthikeya | Home Page</title>
+        <meta name="description" content="karthikeya's Portfolio" />
+      </Head>
+
+      <TransitionEffect />
+
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-center w-full lg:flex-col">
